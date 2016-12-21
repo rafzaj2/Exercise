@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 	void transform(char in[], const char p1[], const char p2[]);
-	char in[50] = "BD{D1}BCAADEFAAGHI";
+	char in[50] = "BD{B1}BCAADEFAAGHI";
 	char p1[] = "AA";
 	char p2[] = "ABC";
 	int i = 1;
@@ -64,10 +64,10 @@ void transform(char in[], const char p1[], const char p2[])
 		if (in[i] != '{') { i++; }
 		else
 		{
-//******* Instrukcja do sekwencji typu P **********************************************************************************************************
-			if (in[++i] == 'P')
+//******* Instrukcja do sekwencji typu G **********************************************************************************************************
+			if (in[++i] == 'G')
 			{
-	//******* Instrukcja do sekwencji typu P1 ********
+	//******* Instrukcja do sekwencji typu G1 ********
 				if (in[++i] == '1')
 				{
 					if ((int)(in[++i]) < 58 && (int)(in[i]) > 47 && (int)(in[++i]) < 58 && (int)(in[i]) > 47 && in[++i] == '}')
@@ -110,7 +110,7 @@ void transform(char in[], const char p1[], const char p2[])
 
 
 				}
-	//******* Instrukcja do sekwencji typu P2 ********
+	//******* Instrukcja do sekwencji typu G2 ********
 				else if (in[i] == '2')
 				{
 					if ((int)(in[++i]) < 58 && (int)(in[i]) > 47 && (int)(in[++i]) < 58 && (int)(in[i]) > 47 && in[++i] == '}')
@@ -154,8 +154,8 @@ void transform(char in[], const char p1[], const char p2[])
 
 				}
 			}
-//******* Instrukcja do sekwencji typu D **********************************************************************************************************
-			else if (in[i] == 'D')
+//******* Instrukcja do sekwencji typu B **********************************************************************************************************
+			else if (in[i] == 'B')
 			{
 
 				if (in[++i] == '-')
@@ -194,10 +194,10 @@ void transform(char in[], const char p1[], const char p2[])
 						//goto poczatek;
 					}
 			}
-//******* Instrukcja do sekwencji typu R *********************************************************************************************************
-			else if (in[i] == 'R')
+//******* Instrukcja do sekwencji typu W *********************************************************************************************************
+			else if (in[i] == 'W)
 			{
-	//******* Instrukcja do sekwencji typu R1 ********
+	//******* Instrukcja do sekwencji typu W1 ********
 				if (in[++i] == '1')
 				{
 					if ((int)(in[++i]) < 58 && (int)(in[i]) > 48 && in[++i] == '}')
@@ -244,7 +244,7 @@ void transform(char in[], const char p1[], const char p2[])
 					}
 
 				}
-	//******* Instrukcja do sekwencji typu R2 ********
+	//******* Instrukcja do sekwencji typu W2 ********
 				else if (in[i] == '2')
 				{
 					if ((int)(in[++i]) < 58 && (int)(in[i]) > 48 && in[++i] == '}')
